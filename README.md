@@ -1,7 +1,25 @@
 # EC530-patient-monitor
 ## Main
 Main branch
-## Branch 2
-## Branch 3
-## Branch 4
-## Branch 5
+## Admin-main
+This is the branch for all the administrators user stories.
+## Admin-user
+This branch focus on the feature that administrators can add assign and change roles to user.
+## Admin-datafeed
+An interface that allow administrators to feed in data (Thermometer, Pulse, Blood pressure, Glucometer, etc.)
+## MP-main
+This is the branch for all the medical professional user stories.
+## MP-Browse-assign-input
+This branch focus on the feature that allow MPs to browse patients and assign them medical devices. Also including input data for patients
+## MP-chat
+This branch focus on the chat feature between MPs and patients
+## MP-calendar
+A calendar that show open time slots for appointments.
+## P-main
+This is the branch for all the patients user stories.
+## P-enter/view-measurements
+This branch focus on the feature that allow patients to view and enter measurements.
+## P-chat
+similar to MP-chat
+## P-appointment
+This branch focus on the feature that allows patients to make appointments.
