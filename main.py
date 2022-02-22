@@ -24,6 +24,10 @@ def abort_if_no_id(pid):
     if pid not in datas:
         abort(404, message = "Patient id is not valid...")
 
+def abort_if_id(pid):
+    if pid in datas:
+        abort(409, message = "Patient id is already there...")
+
 class PatientInfo(Resource):
     def get(self, pid):
         abort_if_no_id(pid)
@@ -33,9 +37,15 @@ class PatientInfo(Resource):
         return {"data": "Posted"}
 
     def put(self,pid):
+        abort_if_id(pid)
         args = data_put_args.parse_args()
         datas[pid] = args
         return datas[pid], 201
+
+    def delete(self,pid):
+        abort_if_no_id(pid)
+        del datas[pid]
+        return '', 204
     
 
 
