@@ -1,10 +1,12 @@
-from email import message
 from flask import Flask,request
 from flask_restful import Api, Resource, reqparse, abort
-from numpy import require
 
 app = Flask(__name__)
 api = Api(app)
+
+@app.route('/')
+def hello_world():
+    return 'Sup'
 
 datas = {
     1: {"name": "Jen", "age":22, "gender": "female", "bloodtype": "AB", "height": 165, "weight": "50kg"},
